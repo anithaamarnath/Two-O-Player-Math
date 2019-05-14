@@ -25,11 +25,11 @@ class Game
     response
 
       if @player1.lives == 0
-        puts "#{@player2.name} wins with a score #{player2.lives}/3"
+        puts "#{@player2.name} wins with a score #{@player2.lives}/3"
         break
         end
       if @player2.lives == 0
-        puts "#{player1.name} wins with a score #{player1.lives}/3"
+        puts "#{@player1.name} wins with a score #{@player1.lives}/3"
         break
         end
     end
@@ -46,7 +46,7 @@ class Game
       @current_answer = gets.chomp.to_i
 
     if @current_answer == @current_question[0] + @current_question[1]
-      puts "Current user lives #{@current_user.lives } and player1 lives #{@player2.lives}"
+      puts "P1 lives #{@player1.lives }/3 and P2 lives #{@player2.lives}/3"
       puts "Yes your correct!"
     else
       @current_user.lives -= 1
@@ -58,8 +58,11 @@ class Game
       else
       @current_user = @player1
     end
-    puts "P2 lives #{@player1.lives }/3 and player2 lives #{player2.lives}/3"
+    puts "P1 lives #{@player1.lives }/3 and P2 lives #{@player2.lives}/3"
+
   end
+
+
 end
 
 
